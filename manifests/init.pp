@@ -29,7 +29,7 @@ class archive (
 
   if $::osfamily == 'Windows' and !($seven_zip_provider in ['', undef]) {
     package { '7zip':
-      ensure   => present,
+      ensure   => latest,
       name     => $seven_zip_name,
       source   => $seven_zip_source,
       provider => $seven_zip_provider,
